@@ -1,1 +1,1 @@
-var url_http = "https://localhost/"
+var url_http = "https://sis-admin-v4ph7.ondigitalocean.app/"
