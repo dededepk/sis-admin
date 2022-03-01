@@ -1,0 +1,83 @@
+/* Laptop */
+@media (max-width: 1366px) {}
+
+/* Fin laptop */
+/* Tablet landscape */
+@media (max-width: 1024px) {
+  .form-login {
+    min-width: 100%;
+  }
+}
+
+/* Fin tablet landscape */
+/* Big cell landscape */
+@media (max-width: 916px) {
+
+  .form-login {
+    min-width: 480px;
+  }
+
+  .form-login .logo {
+    /* background-color: lavender; */
+    width: 100%;
+  }
+
+}
+
+/* Fin Big cell landscape */
+/* Tablet portrait */
+@media (max-width: 768px) {
+  .grid-container-abogados {
+    /* background-color: pink; */
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* fin tablet portrait */
+/* Cell landscape */
+@media (max-width: 736px) {
+
+}
+
+/* Fin cell landscape */
+/* Small cell landscape */
+@media (max-width: 568px) {
+
+}
+
+/* Fin small cell landscape */
+/* Cell portrait */
+@media (max-width: 480px) {
+  .container-mobile{
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .form-login {
+    min-width: 100%;
+    padding: 1.5rem;
+  }
+
+  .nav-pills .nav-link {
+    padding-left: 0;
+    padding-right: 0;
+    font-size: .75rem;
+  }
+
+  .grid-container-abogados {
+    /* background-color: pink; */
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .navbar-cear .btn-user .user-name {
+    display: none;
+  }
+}
+
+/* Fin cell portrait */
+/* Small cell portrait */
+@media (max-width: 360px) {
+
+}
+
+/* Fin small cell portrait */

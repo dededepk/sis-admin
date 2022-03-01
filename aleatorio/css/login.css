@@ -1,0 +1,787 @@
+/* Estilos Generales */
+:root {
+  --n-01: #2D2D2D;
+  --g-01: #757677;
+  --g-02: #BCBEBE;
+  --g-03: #EBECEC;
+  --b-01: #FFFFFF;
+  --a-01: #114357;
+  --a-02: #286781;
+  --a-03:#4DADBC;
+  --c-01: #C5DADE;
+  --c-02: #E6EEEF;
+  --error: #C60D0D;
+  --warning: #FFB700;
+  --info: #1A58DD;
+  --success: #06C170;
+}
+
+html {
+  font-size: 16px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: var(--a-01);
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.5rem;
+}
+
+main {
+  min-height: calc(100vh - 82px);
+}
+
+hr {
+  background-color: var(--a-01);
+}
+
+h1 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+small {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+/* Font weight */
+
+.fw-sb {
+  font-weight: 500;
+}
+
+.fw-b {
+  font-weight: 700;
+}
+
+/*End Font weight */
+
+/* bg colors */
+.bg-cear {
+  background-color: var(--c-02);
+}
+
+.bg-light{
+  background-color: var(--b-01) !important;
+}
+/* end bg colors */
+
+/* Margins */
+.marginBottom-0-5 {
+  margin-bottom: .5rem !important;
+}
+
+.marginBottom-1 {
+  margin-bottom: 1rem !important;
+}
+
+.marginBottom-1-5 {
+  margin-bottom: 1.5rem !important;
+}
+
+.marginBottom-2 {
+  margin-bottom: 2rem !important;
+}
+
+.marginBottom-2-5 {
+  margin-bottom: 2.5rem !important;
+}
+
+
+.marginBottom-3 {
+  margin-bottom: 3rem !important;
+}
+
+.marginBottom-3-5 {
+  margin-bottom: 3.5rem !important;
+}
+
+.marginBottom-4 {
+  margin-bottom: 4rem !important;
+}
+
+.marginBottom-4-5 {
+  margin-bottom: 4.5rem;
+}
+
+/* End Margins */
+
+/* Paddings */
+.paddingTop-1 {
+  padding-top: 1rem;
+}
+
+.paddingTop-2 {
+  padding-top: 2rem;
+}
+
+.paddingTop-3 {
+  padding-top: 3rem;
+}
+/* End Paddings */
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  font-weight: 600;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.btn:focus, .btn.focus {
+  outline: 0;
+  box-shadow: none;
+}
+
+.btn-large {
+  padding: .75rem 3rem;
+}
+
+.btn-icon {
+  display: flex;
+  align-items: center;
+}
+
+.btn-icon .material-icons {
+  padding-left: 1rem;
+}
+
+.primary-button {
+  background-color: var(--a-02);
+  color: var(--g-03);
+}
+
+.primary-button:hover {
+  background-color: var(--a-01);
+  color: var(--g-03);
+}
+
+.primary-button:focus {
+  background-color: var(--b-01);
+  color: var(--a-01);
+  border-color: 1px solid var(--green);
+}
+
+.primary-button.disabled {
+  background-color: var(--g-02);
+  color: var(--b-01);
+  opacity: 1;
+}
+
+.link-button {
+  /* background-color: salmon; */
+  color: var(--a-02);
+  padding: 0.5rem  0;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.link-button:hover {
+  color: var(--a-01);
+  text-decoration: underline;
+}
+
+.link-button:focus {
+  color: var(--a-01);
+  text-decoration: underline;
+}
+
+.link-button.disabled {
+  color: var(--g-02);
+  text-decoration: underline;
+}
+
+.light-button {
+  color: var(--n-01);
+}
+
+.light-button:hover {
+  color: var(--n-01);
+  background-color: var(--g-03);
+}
+
+.btn-light:focus, .btn-light.focus {
+  color: var(--n-01);
+  background-color: var(--g-03);
+  border-color: var(--g-03);
+  box-shadow: 0 0 0 0.2rem rgba(216, 217, 219, 0.5);
+}
+
+.btn-light.disabled, .btn-light:disabled {
+  background-color: var(--g-02);
+  color: var(--b-01);
+  opacity: 1;
+}
+/* End Buttons */
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+/* Fin Estilos Generales */
+
+/* main -------------------- */
+
+.main-login {
+  /* background-color: palegreen; */
+  min-height: 100vh;
+}
+
+/* img login */
+
+.wrap-img-login {
+  /* background-color: var(--info); */
+  background-image: url(../img/bg/bg-login.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+/* Fin img login */
+
+/* form-login */
+
+.wrap-form-login {
+  /* background-color: var(--info); */
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--a-01);
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.form-login {
+  background-color: var(--b-01);
+  min-width: 480px;
+  padding: 3.5rem;
+  border-radius: .25rem;
+  box-shadow: 0px 4px 8px rgba(45, 45, 45, 0.16);
+}
+
+.form-title {
+  /* background-color: lavender; */
+  text-align: center;
+}
+
+.field-icon {
+  background-color: var(--b-01);
+  cursor: pointer;
+  float: right;
+  margin-left: -2rem;
+  margin-top: -2.2rem;
+  margin-right: 1rem;
+  position: relative;
+  z-index: 2;
+  color: var(--a-01);
+}
+
+.form-login .logo {
+  /* background-color: lavender; */
+  width: 430px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1.5rem;
+}
+
+.form-login .logo img {
+  width: 100%;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -o-crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+  -ms-interpolation-mode: nearest-neighbor;
+}
+
+.form-label {
+  color: var(--a-01);
+}
+
+.form-control, .form-select {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--a-01);
+  background-color: var(--b-01);
+  background-clip: padding-box;
+  border: 1px solid var(--g-02);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-control:hover {
+  box-shadow: 0px 4px 8px rgba(45, 45, 45, 0.16);
+}
+
+.form-control:focus {
+  box-shadow: inset 0 0 0 2px var(--a-02);
+  outline: 0;
+  color: var(--a-01);
+}
+
+/* fin form login */
+
+
+.form-control:disabled {
+  opacity: .5;
+}
+
+.text-help {
+  color: var(--error);
+  display: flex;
+  align-items: center;
+  padding-top: .25rem;
+  display: none;
+}
+
+.text-help .material-icons {
+  margin-right: .5rem;
+}
+
+.error-input .form-control, .error-input .form-select {
+  box-shadow: inset 0 0 0 2px var(--error);
+  outline: 0;
+  color: var(--error);
+}
+
+/* fin Main */
+
+/* Modal Contraseña olvidada */
+  .modal-dialog {
+    border-radius: .5rem;
+    overflow: hidden;
+  }
+
+  .btn-close {
+    box-sizing: content-box;
+    width: 1em;
+    height: 1em;
+    padding: 0.25em 0.25em;
+    color: var(--a-01);
+    background: transparent url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000'%3e%3cpath d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z'/%3e%3c/svg%3e") center/1em auto no-repeat;
+    border: 0;
+    border-radius: 0.25rem;
+    opacity: 0.5;
+  }
+  .btn-close:hover {
+    color: var(--a-01);
+    text-decoration: none;
+    opacity: 0.75;
+  }
+  .btn-close:focus {
+    outline: 0;
+    box-shadow: none;
+    opacity: 1;
+  }
+
+  .modal-header {
+    padding-top: 1.5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .modal-header, .modal-footer {
+    border: none;
+  }
+
+  .modal-body {
+    /* background-color: pink; */
+    color: var(--a-01);
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 0;
+    padding-bottom: 1.5rem;
+  }
+
+  .modal-title {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 600;
+  }
+
+  .modal-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 1.5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 0;
+  }
+
+  .modalInfo .iconModal {
+    font-size: 2rem;
+  }
+
+  .modal .form-group {
+    text-align: left;
+  }
+/* Fin modal contraseña olvidada */
+
+/* modal arbitro elegido */
+.card-lawyer-elected {
+  background-color: var(--g-03);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  text-align: left;
+  border-radius: .25rem;
+  margin-bottom: .5rem;
+}
+
+.card-lawyer-elected .name-lawyer {
+  font-weight: 600;
+  margin-bottom: .5rem;
+}
+
+.card-lawyer-elected .user-img {
+  min-width: 5rem;
+  min-height: 5rem;
+  max-width: 5rem;
+  max-height: 5rem;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.card-lawyer-elected .user-img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-especialidad {
+  background-color: var(--g-03);
+  border-radius: .25rem;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 600;
+  margin-bottom: .5rem;
+}
+
+.card-especialidad .material-icons {
+  color: var(--success);
+}
+
+/* Fin modal arbitro elegido */
+
+/* SISTEMA ALEATORIO */
+/* Stepper tabs */
+.nav-pills-stepper {
+  /* background-color: pink; */
+  padding-right: 12px;
+  padding-left: 12px;
+}
+
+.nav-pills-stepper .nav-item {
+  /* background-color: yellow; */
+}
+
+.nav-pills-stepper .nav-link {
+  color: var(--g-02);
+  text-align: center;
+  font-weight: 600;
+  font-size: 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-bottom: 1rem;
+}
+
+.step-position {
+  background-color: var(--g-02);
+  color: var(--b-01);
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: .5rem;
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.nav-pills-stepper .nav-link.active,
+.nav-pills-stepper .show > .nav-link {
+  color: var(--a-02);
+  background-color: var(--c-02);
+  border-bottom: solid 2px var(--a-01);
+}
+
+.nav-pills-stepper .nav-link.active .step-position {
+  background-color: var(--a-02);
+}
+
+.nav-pills .nav-link {
+  border-radius: 0;
+  height: 100%;
+}
+
+.nav-pills-stepper .nav-link:hover .step-position {
+  background-color: var(--a-01);
+}
+
+.nav-pills-stepper .nav-link:hover {
+  color: var(--a-01);
+}
+
+/* estilo del paso completado */
+.nav-pills-stepper .nav-link.completed .step-position {
+  background-color: var(--a-01);
+}
+
+.nav-pills-stepper .nav-link.completed {
+  color: var(--a-01);
+}
+
+/* fin del estilo del paso completado */
+
+.tab-content-stepper {
+  /* background-color: lavender; */
+}
+
+.footer-stepper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2.5rem;
+}
+
+.footer-stepper .btn:first-child {
+  margin-bottom: 1rem;
+}
+
+/* Fin stepper tab */
+
+/* Grid cards abogados */
+.grid-container-abogados {
+  /* background-color: pink; */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1rem;
+}
+
+.grid-container-abogados .item {
+  /* height: 14rem; */
+}
+
+.card-lawyer {
+  background-color: var(--a-03);
+  border-radius: .25rem;
+  padding: .5rem;
+  display: flex;
+  align-items: center;
+}
+
+.card-lawyer.selected {
+  background-color: var(--b-01);
+}
+
+.card-lawyer.selected .info-user .name-lawyer {
+  color: var(--a-02);
+}
+
+.card-lawyer .user-img {
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 1rem;
+}
+
+.card-lawyer .user-img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-lawyer .info-user .name-lawyer {
+  color: var(--g-03);
+  font-weight: 600;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.content-card-lawyer-selected {
+  display: flex;
+  align-items: center;
+}
+
+.card-lawyer-selected {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--b-01);
+  border: 1px solid var(--a-02);
+}
+
+.content-card-lawyer-selected .info-user .name-lawyer {
+  color: var(--a-02);
+}
+
+.content-card-lawyer-selected .info-user .type-lawyer {
+  color: var(--a-02);
+}
+
+.card-lawyer-selected .btn {
+  color: var(--a-02);
+  display: flex;
+  align-items: center;
+}
+/* Fin grid cards abogados */
+
+.content-chosen {
+  border-top: 1px solid var(--a-02);
+  padding-top: 2rem;
+}
+
+.card-lawyer-skills {
+  background-color: var(--b-01);
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  border-radius: .5rem;
+  box-shadow: 0px 4px 8px rgba(45, 45, 45, 0.16);
+}
+
+.wrap-info-lawyer {
+  /* background-color: pink; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.wrap-info-lawyer .user-img {
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.wrap-info-lawyer .user-img img {
+  height: 100%;
+  width: 100%;
+}
+
+.card-lawyer-type .type {
+  font-weight: 500;
+}
+
+.wrap-especialidades .card-especialidad {
+  padding: 0;
+  margin-bottom: 1rem;
+}
+
+/* FIN SISTEMA ALEATORIO */
+
+/* DISCLAIMER */
+.navbar-cear {
+  background-color: var(--a-03);
+  padding-top: .75rem;
+  padding-bottom: .75rem;
+}
+
+.navbar-brand img {
+  height: 3rem;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -o-crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+  -ms-interpolation-mode: nearest-neighbor;
+}
+
+.navbar-cear .btn-user {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-right: 0;
+  color: var(--b-01);
+  font-weight: 400;
+}
+
+.navbar-cear .btn-user .material-icons {
+  margin-left: 1rem;
+}
+
+.content-disclaimer {
+  max-width: 640px;
+  text-align: justify;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* END DISCLAIMER */
+
+#content-resumen {
+  display: none;
+}
+
+/* LOADER */
+
+.loader {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  background-color: rgba(197, 218, 222, .9);
+  width:100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  z-index: 1055;
+  display: none;
+}
+
+.loader img {
+  margin-bottom: 1rem;
+  height: 8rem;
+  width: 8rem;
+}
+
+.loader span {
+  font-size: 1.5rem;
+}
+/* END LOADER */

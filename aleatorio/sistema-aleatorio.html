@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>Sistema Aleatorio</title>
+	<meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
+	<link rel="icon" href="img/icons/favicon.png" type="image/x-icon" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+	<script src="js/plugin/webfont/webfont.min.js"></script>
+	<link href="css/fonts.min.css" rel="stylesheet" type="text/css">
+	<!-- CSS Files -->
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/login.css">
+	<link rel="stylesheet" href="css/mq-login.css">
+</head>
+
+<body>
+	<header id="header_content">
+		
+	</header>
+	<main class="bg-cear">
+		<div class="container container-mobile paddingTop-3" id="content-sorteo">
+			<div class="row">
+				<div class="col-12">
+					<h1 class="text-center fw-b marginBottom-0-5">
+						Nuevo sorteo
+					</h1>
+					<div class="d-flex justify-content-center marginBottom-2-5">
+						<button type="button" class="btn link-button"  data-bs-toggle="modal" data-bs-target="#modalInstrucciones">
+							Ver instrucciones
+						</button>
+					</div>
+				</div>
+				<ul class="nav nav-pills nav-pills-stepper col-xl-6 marginBottom-2-5 mx-auto" id="pills-tab" role="tablist">
+					<li class="nav-item col-4" role="presentation">
+						<button class="nav-link active" id="pills-especialidad-tab" aria-selected="true">
+							<div class="step-position">
+								1
+							</div>
+							Selecciona una especialidad
+						</button>
+					</li>
+					<li class="nav-item col-4" role="presentation">
+						<button class="nav-link" id="pills-sorteo-tab" aria-selected="false">
+							<div class="step-position">
+								2
+							</div>
+							Sortea al árbitro
+						</button>
+					</li>
+					<li class="nav-item col-4" role="presentation">
+						<button class="nav-link" id="pills-registro-tab" aria-selected="false">
+							<div class="step-position">
+								3
+							</div>
+							Registra los resultados
+						</button>
+					</li>
+				</ul>
+				<div class="tab-content" id="pills-tabContent">
+					<div class="tab-pane fade show active" id="pills-especialidad" role="tabpanel" aria-labelledby="pills-especialidad-tab">
+						<div class="error-input- col-xl-6 mx-auto marginBottom-2">
+							<select id="cbo_especialidad" class="form-select form-control" aria-label="Default select example">
+							</select>
+							<small class="text-help" id="error-cbo_especialidad">
+								<span class="material-icons">
+									report_problem
+								</span>
+								El usuario es incorrecto
+							</small>
+						</div>
+						<div class="footer-stepper">
+							<button id="btn_continuar" type="button" name="button" class="btn btn-large primary-button">
+								Continuar
+							</button>
+						</div>
+					</div>
+					<div class="tab-pane fade" id="pills-sorteo" role="tabpanel" aria-labelledby="pills-sorteo-tab">
+						<div class="error-input- col-xl-6 mx-auto marginBottom-3-5">
+							<select id="cbo_especialidad_paso2" class="form-select form-control" aria-label="Default select example">
+							</select>
+							<small class="text-help" id="error-cbo_especialidad_paso2">
+								<span class="material-icons">
+									report_problem
+								</span>
+								El usuario es incorrecto
+							</small>
+						</div>
+						<div id="div-grid-container-abogados" class="grid-container-abogados marginBottom-2">
+						</div>
+						<div class="footer-stepper">
+							<button id="btn_sortear" type="button" name="button" class="btn btn-large primary-button">
+								Sortear
+							</button>
+							<button type="button" id="btn_finalizar_sorteo" class="btn link-button">
+								Finalizar sorteo
+							</button>
+						</div>
+						 
+						<div class="content-chosen fade" id="div-chosen" >
+							<div class="grid-container-abogados marginBottom-3-5" id="content-chosen">
+								<div class="item card-lawyer card-lawyer-selected">
+
+									<div class="content-card-lawyer-selected">
+										<div class="user-img">
+											<img src="img/avatars/user1.png" alt="">
+										</div>
+										<div class="info-user">
+											<div class="name-lawyer">
+												Nombre usuario
+											</div>
+											<div class="type-lawyer">
+												Árbitro Único / Presidente
+											</div>
+										</div>
+									</div>
+									<div class="btn-group dropstart">
+										<button type="button" class="btn p-0" data-bs-toggle="dropdown" aria-expanded="false">
+											<span class="material-icons-outlined">
+												more_vert
+											</span>
+										</button>
+										<ul class="dropdown-menu">
+											<li>
+												<button class="dropdown-item" type="button">
+													Eliminar abogado
+												</button>
+											</li>
+										</ul>
+									</div>
+								</div>
+								
+							</div>
+						</div>
+
+					</div>
+					<div class="tab-pane fade" id="pills-registro" role="tabpanel" aria-labelledby="pills-registro-tab">
+						<div class="row marginBottom-2">
+							<div class="col-xl-4 mx-auto">
+									<h1 class="marginBottom-2">Sorteo de Contratación Pública</h1>
+									<h2 class="mb-0-5 fw-sb">Árbitros seleccionados</h2>
+									<div id="div-resumen">
+										
+									</div>
+									<h2 class="mb-0-5 fw-sb">Registra el caso</h2>
+									<div class="marginBottom-1 error-input-">
+										<label for="inputCaso" class="form-label">Nombre del caso</label>
+										<input type="text" class="form-control" id="inputCaso">
+										<small class="text-help" id="error-inputCaso">
+											<span class="material-icons">
+												report_problem
+											</span>
+											El campo es obligatorio
+										</small>
+									</div>
+								</div>
+						</div>
+						<div class="footer-stepper">
+							<button type="button" id="btn_registrar_caso" name="button" class="btn btn-large primary-button">
+								Registrar caso
+							</button>
+							<button type="button" id="btn_regresar" class="btn link-button">
+								Regresar
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container container-mobile paddingTop-3" id="content-resumen">
+			<div class="row">
+				<div class="col-12">
+					<h1 class="text-center fw-b marginBottom-2">
+						Has registrado el caso:
+					</h1>
+					<h2 class="text-center fw-sb marginBottom-2" id="h2nombrecaso">
+						Nombre del caso
+					</h2>
+				</div>
+				<div class="col-xl-6 mx-auto">
+					<h2 class="mb-0-5 fw-sb">Árbitro seleccionado</h2>
+					<div id="div-resumen-final">
+						<div class="card-lawyer-elected bg-light marginBottom-2">
+							<div class="info-lawyer">
+								<div class="name-lawyer">
+									Raúl Osorio
+								</div>
+								<div class="cal-lawyer">
+									CAL: 4687
+								</div>
+								<button type="button" class="btn link-button">
+									Descargar CV
+								</button>
+							</div>
+							<div class="user-img">
+								<img src="img/avatars/user1.png" alt="">
+							</div>
+						</div>
+				    </div>
+					<div class="footer-stepper">
+						<button type="button" name="button" class="btn btn-large primary-button marginBottom-0-5" id="btn_show_sorteo">
+							Realizar nuevo sorteo
+						</button>
+						<button type="button" name="button" class="btn link-button" id="btn_cerrar_deresumen">
+							cerrar sesión
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	
+		<!-- LOADER -->
+		<div class="loader" id="divloader">
+			<img src="img/icons/loader.gif" alt="">
+			<span>Cargando...</span>
+		</div>
+		<!-- END LOADER -->
+
+	<div class="modal fade modalInfo" id="modalArbitroElegido" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body text-left" id="div-body-contenedor-elegido">
+					<h1 class="modal-title marginBottom-1-5 text-center">El árbitro elegido es:</h1>
+					<div class="card-lawyer-elected">
+						<div class="info-lawyer">
+							<div class="name-lawyer">
+								Raúl Osorio
+							</div>
+							<div class="cal-lawyer">
+								CAL: 4687
+							</div>
+							<button type="button" class="btn link-button">
+								Descargar CV
+							</button>
+						</div>
+						<div class="user-img">
+							<img src="img/avatars/user1.png" alt="">
+						</div>
+					</div>
+					<p class="marginBottom-0-5">Tipo de árbitro</p>
+					<div class="card-especialidad">
+						<div class="tipo-arbitro">
+							Árbitro Único / Presidente
+						</div>
+					</div>
+					<p class="marginBottom-0-5">Especialidades</p>
+					<div class="card-especialidad">
+						<div class="especialidad">
+							RNA-OSCE:
+						</div>
+						<span class="material-icons">
+							check_circle
+						</span>
+					</div>
+					<div class="card-especialidad">
+						<div class="especialidad">
+							Arbitraje:
+						</div>
+						<span class="material-icons">
+							check_circle
+						</span>
+					</div>
+					<div class="card-especialidad">
+						<div class="especialidad">
+							Contratación con el Estado:
+						</div>
+						<span class="material-icons">
+							check_circle
+						</span>
+					</div>
+					<div class="card-especialidad">
+						<div class="especialidad">
+							Derecho administrativo:
+						</div>
+						<span class="material-icons">
+							check_circle
+						</span>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" id="btn_agregar" class="btn primary-button btn-large">
+						Agregar árbitro
+					</button>
+					<button type="button" class="btn link-button" data-bs-dismiss="modal">
+						Cancelar
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade modalInfo" id="modalEliminarArbitro" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body text-left">
+					<h1 class="modal-title marginBottom-1-5 text-center">Estás eliminando al árbitro:</h1>
+					<div class="card-lawyer-elected" id="div-body-contenedor-eliminar">
+						<div class="info-lawyer">
+							<div class="name-lawyer">
+								Raúl Osorio
+							</div>
+							<div class="cal-lawyer">
+								CAL: 4687
+							</div>
+							<button type="button" class="btn link-button">
+								Descargar CV
+							</button>
+						</div>
+						<div class="user-img">
+							<img src="img/avatars/user1.png" alt="">
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" id="btn_eliminar_arb_ya" class="btn primary-button btn-large">
+						Eliminar árbitro
+					</button>
+					<button type="button" class="btn link-button" data-bs-dismiss="modal">
+						Cancelar
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade modalInfo" id="modalInstrucciones" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<h1 class="modal-title marginBottom-1-5 text-center">Procedimiento de Designación Aleatorio</h1>
+					<p>
+						El Secretario General o Adjunto deberá realizar entre uno (1) o un máximo de tres (3) pruebas, explicando el procedimiento de designación de árbitros.
+					</p>
+					<p>
+						Una vez realizado las pruebas se dará inicio al procedimiento de designación, previamente se actualizará el sistema, y se deberá grabar el acto mediante cámara de video o grabado a través de un aplicativo que se guardará en la nube.
+					</p>
+					<p>
+						La designación del árbitro u árbitros que corresponda (árbitro de parte, árbitro único o presidente de tribunal arbitral), será un titular y un suplente, ambos deben cumplir los requisitos exigidos por la ley de la materia o lo que hayan pactado las partes en el convenio arbitral o lo que establezcan los reglamentos de CEAR LATINOAMERICANO.
+					</p>
+					<p>
+						Luego el Secretario General o Adjunto, elaborará el Acta de designación dejando constancia, en caso haya(n) participado o en su defecto, se le(s) notificará a la parte(s) inasistente(s) con el contenido de dicha Acta, para los fines correspondientes.
+					</p>
+					<p>
+						Por último, el Secretario General notificará en el día al ábitro u árbitros designado(s). El árbitro u árbitros tiene(n) tres (3) días hábiles para aceptar o declinar.
+					</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-large primary-button" data-bs-dismiss="modal">
+						Aceptar
+					</button>
+					<button type="button" class="btn btn-large link-button" data-bs-dismiss="modal">
+						Cancelar
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade modalInfo" id="modalRegistrarCaso" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body text-left">
+					<h2 class="text-center">Estás registrando el caso:</h2>
+					<h1 class="modal-title marginBottom-1-5 text-center" id="h1nombrecaso">Nombre del caso</h1>
+				</div>
+				<div class="modal-footer">
+					<button type="button" id="btn_registrar_caso_ya" class="btn primary-button btn-large" data-bs-dismiss="modal" id="show-resumen">
+						Confirmar
+					</button>
+					<button type="button" class="btn link-button" data-bs-dismiss="modal">
+						Cancelar
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--   Bootstrap JS Files   -->
+	<script src="js/bootstrap/jquery.3.2.1.min.js"></script>
+	<script src="js/bootstrap/bootstrap.bundle.min.js"></script>
+
+	<!--<script src="js/login.js"></script>-->
+	<script src="view/util/Variables.js"></script>
+	<script src="view/util/Form.js"></script>
+	<script src="view/util/Utilitario.js"></script>
+	<script src="view/util/Consumo.js"></script>
+	<script src="view/sorteo/especialidad.js"></script>
+	<script src="view/sorteo/pasos.js"></script>
+	<script src="view/sorteo/abogados.js"></script>
+
+</body>
+
+</html>
